@@ -35,9 +35,10 @@ var processando = false
 // var pages = true
 
 const multibar = new _cliProgress.MultiBar({
-  clearOnComplete: true,
   barsize: 100,
-  format: '{label} [{bar}] {percentage}% | ETA: {eta}s | {value}/{total}'
+  format: '{label} [{bar}] {percentage}% | ETA: {eta}s | {value}/{total}',
+  hideCursor: true,
+  clearOnComplete: true,
 
 }, _cliProgress.Presets.shades_grey);
 
@@ -49,9 +50,9 @@ class Manga extends Task {
   async handle() {
     if (!processando) {
       processando = true
-      await this.categories()
-      await this.series()
-      await this.scanlators()
+      // await this.categories()
+      // await this.series()
+      // await this.scanlators()
       await this.chapters()
       await this.pages()
       processando = false
@@ -89,8 +90,7 @@ class Manga extends Task {
         await axios.get(`/categories/series_list.json?page=${page}&id_category=${category.id_category}`)
           .then(async (response) => {
             if (response.data.series.length == 0) {
-              bar_series_category.update(page)
-              bar_series_category.setTotal(page)
+              multibar.remove(bar_series_category)
               page = -1
             } else {
               for (const serieJSON of response.data.series) {
@@ -124,7 +124,7 @@ class Manga extends Task {
     // console.log(`/scanlators/scanlators_list.json`)
     await axios.get(`/scanlators/scanlators_list.json`)
       .then(async (response) => {
-        const bar_scanlators = multibar.create(response.data.scanlators_list.length + 1, 0, { label: 'Scanlators' })
+        const bar_scanlators = multibar.create(response.data.scanlators_list.length + 1, 0, { label: _.padEnd('Scanlators', 45) })
 
         for (const scanlatorJSON of response.data.scanlators_list) {
           const scanlator = await Scanlator.findOrCreate(
@@ -158,56 +158,61 @@ class Manga extends Task {
   }
 
   async chapters() {
-    // chapters = false
     const series = await Serie.all()
-    const bar_chapters = multibar.create(series.toJSON().length + 1, 0, { label: 'chapters' })
+    const bar_chapters = multibar.create(series.toJSON().length + 1, 0, { label: _.padEnd('Processing series', 50) })
 
-    for (const serie of series.toJSON()) {
-      var page = 1
-      while (page > 0) {
-        // console.log(`/series/chapters_list.json?id_serie=${serie.id_serie}&page=${page}`)
-        await axios.get(`/series/chapters_list.json?id_serie=${serie.id_serie}&page=${page}`)
-          .then(async (response) => {
-            if (response.data.chapters === false) {
-              page = -1
-            } else {
-              for (const chapterJSON of response.data.chapters) {
-                const chapter = await Chapter.findOrCreate(
-                  { id_chapter: chapterJSON.id_chapter },
-                  {
-                    id_chapter: chapterJSON.id_chapter,
-                    serie_id: chapterJSON.id_serie,
-                    chapter_name: chapterJSON.chapter_name,
-                    number: chapterJSON.number,
-                    date: chapterJSON.date,
-                    date_created: chapterJSON.date_created,
+    _.chunk(series.toJSON(), 500).forEach(async chunk => {
+
+      for (const serie of chunk) {
+        var page = 1
+        const bar_series_chapter = multibar.create(page, 0, { label: _.padEnd(`  > ${serie.name}`, 100) })
+        while (page > 0) {
+          await axios.get(`/series/chapters_list.json?id_serie=${serie.id_serie}&page=${page}`)
+            .then(async (response) => {
+              if (response.data.chapters === false) {
+                multibar.remove(bar_series_chapter)
+                page = -1
+              } else {
+                for (const chapterJSON of response.data.chapters) {
+                  const chapter = await Chapter.findOrCreate(
+                    { id_chapter: chapterJSON.id_chapter },
+                    {
+                      id_chapter: chapterJSON.id_chapter,
+                      serie_id: chapterJSON.id_serie,
+                      chapter_name: chapterJSON.chapter_name,
+                      number: chapterJSON.number,
+                      date: chapterJSON.date,
+                      date_created: chapterJSON.date_created,
+                    }
+                  )
+  
+                  var attrRelease = Object.keys(chapterJSON.releases)[0]
+                  var id_scanlator = Object.keys(chapterJSON.releases)[0].match(/\d/)
+                  if (id_scanlator) {
+                    id_scanlator = id_scanlator[0]
+                  } else {
+                    id_scanlator = null
                   }
-                )
-
-                var attrRelease = Object.keys(chapterJSON.releases)[0]
-                var id_scanlator = Object.keys(chapterJSON.releases)[0].match(/\d/)
-                if (id_scanlator) {
-                  id_scanlator = id_scanlator[0]
-                } else {
-                  id_scanlator = null
+  
+                  Release.findOrCreate(
+                    { id_release: chapterJSON.releases[attrRelease].id_release },
+                    {
+                      id_release: chapterJSON.releases[attrRelease].id_release,
+                      scanlator_id: id_scanlator,
+                      chapter_id: chapter.id_chapter,
+                      link: chapterJSON.releases[attrRelease].link,
+                    }
+                  )
                 }
-
-                await Release.findOrCreate(
-                  { id_release: chapterJSON.releases[attrRelease].id_release },
-                  {
-                    id_release: chapterJSON.releases[attrRelease].id_release,
-                    scanlator_id: id_scanlator,
-                    chapter_id: chapter.id_chapter,
-                    link: chapterJSON.releases[attrRelease].link,
-                  }
-                )
+                bar_series_chapter.update(page)
+                bar_series_chapter.setTotal(page + 1)
               }
-            }
-          })
-        page += 1
+            })
+          page += 1
+        }
+        bar_chapters.increment()
       }
-      bar_chapters.increment()
-    }
+    })
     // console.log("Chapters END")
   }
 
