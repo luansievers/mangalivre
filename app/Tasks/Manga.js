@@ -165,7 +165,7 @@ class Manga extends Task {
 
       for (const serie of chunk) {
         var page = 1
-        const bar_series_chapter = multibar.create(page, 0, { label: _.padEnd(`  > ${serie.name}`, 100) })
+        const bar_series_chapter = multibar.create(chunk.length, 0, { label: _.padEnd(`  > ${serie.name}`, 100) })
         while (page > 0) {
           await axios.get(`/series/chapters_list.json?id_serie=${serie.id_serie}&page=${page}`)
             .then(async (response) => {
@@ -205,7 +205,7 @@ class Manga extends Task {
                   )
                 }
                 bar_series_chapter.update(page)
-                bar_series_chapter.setTotal(page + 1)
+                // bar_series_chapter.setTotal(page + 1)
               }
             })
           page += 1
