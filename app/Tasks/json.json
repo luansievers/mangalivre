@@ -1,0 +1,694 @@
+{
+    "chapters": [
+      {
+        "id_serie": 1,
+        "id_chapter": 2434,
+        "name": "Naruto",
+        "chapter_name": "Uma triste conclusão",
+        "number": "296",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:45-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2554,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.274",
+            "link": "\/manga\/naruto\/2554\/capitulo-296"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2433,
+        "name": "Naruto",
+        "chapter_name": "A libertação de Chakra",
+        "number": "295",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:29-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2549,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.389",
+            "link": "\/manga\/naruto\/2549\/capitulo-295"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2432,
+        "name": "Naruto",
+        "chapter_name": "A quarta cauda",
+        "number": "294",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:32-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2550,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.433",
+            "link": "\/manga\/naruto\/2550\/capitulo-294"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2431,
+        "name": "Naruto",
+        "chapter_name": "Fora de controle",
+        "number": "293",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:49-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2555,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.195",
+            "link": "\/manga\/naruto\/2555\/capitulo-293"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2430,
+        "name": "Naruto",
+        "chapter_name": "A terceira cauda",
+        "number": "292",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:38-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2552,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.433",
+            "link": "\/manga\/naruto\/2552\/capitulo-292"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2429,
+        "name": "Naruto",
+        "chapter_name": "Desencadeando a raiva",
+        "number": "291",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:53-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2556,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.498",
+            "link": "\/manga\/naruto\/2556\/capitulo-291"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2428,
+        "name": "Naruto",
+        "chapter_name": "A conclusão da traição",
+        "number": "290",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:21:16-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2564,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.762",
+            "link": "\/manga\/naruto\/2564\/capitulo-290"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2427,
+        "name": "Naruto",
+        "chapter_name": "O espião da Akatsuki",
+        "number": "289",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:25-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2548,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.258",
+            "link": "\/manga\/naruto\/2548\/capitulo-289"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2426,
+        "name": "Naruto",
+        "chapter_name": "Sentimentos incompreensíveis",
+        "number": "288",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:22-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2547,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.168",
+            "link": "\/manga\/naruto\/2547\/capitulo-288"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2425,
+        "name": "Naruto",
+        "chapter_name": "Sem nome",
+        "number": "287",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:14-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2546,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.258",
+            "link": "\/manga\/naruto\/2546\/capitulo-287"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2424,
+        "name": "Naruto",
+        "chapter_name": "Naruto, Sasuke e Sai",
+        "number": "286",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:10-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2542,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.906",
+            "link": "\/manga\/naruto\/2542\/capitulo-286"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2423,
+        "name": "Naruto",
+        "chapter_name": "O homem raiz?",
+        "number": "285",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:10-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2541,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.548",
+            "link": "\/manga\/naruto\/2541\/capitulo-285"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2422,
+        "name": "Naruto",
+        "chapter_name": "Novos Aliados",
+        "number": "284",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:05-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2539,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.784",
+            "link": "\/manga\/naruto\/2539\/capitulo-284"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2421,
+        "name": "Naruto",
+        "chapter_name": "Procura por membros para o time",
+        "number": "283",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:08-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2540,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.603",
+            "link": "\/manga\/naruto\/2540\/capitulo-283"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2420,
+        "name": "Naruto",
+        "chapter_name": "A volta do time Kakashi",
+        "number": "282",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:11-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2545,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.990",
+            "link": "\/manga\/naruto\/2545\/capitulo-282"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2419,
+        "name": "Naruto",
+        "chapter_name": "O caminho para Sasuke",
+        "number": "281",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:20:10-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2544,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "5.262",
+            "link": "\/manga\/naruto\/2544\/capitulo-281"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2418,
+        "name": "Naruto",
+        "chapter_name": "Sentimentos confiados a nós",
+        "number": "280",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:17:26-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2481,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "5.248",
+            "link": "\/manga\/naruto\/2481\/capitulo-280"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2417,
+        "name": "Naruto",
+        "chapter_name": "Poder misterioso",
+        "number": "279",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:17:54-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2491,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.469",
+            "link": "\/manga\/naruto\/2491\/capitulo-279"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2416,
+        "name": "Naruto",
+        "chapter_name": "A morte de Gaara",
+        "number": "278",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:17:52-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2490,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.559",
+            "link": "\/manga\/naruto\/2490\/capitulo-278"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2415,
+        "name": "Naruto",
+        "chapter_name": "A última obra de arte",
+        "number": "277",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:18:00-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2493,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.409",
+            "link": "\/manga\/naruto\/2493\/capitulo-277"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2414,
+        "name": "Naruto",
+        "chapter_name": "O novo Sharingan",
+        "number": "276",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:17:22-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2480,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.776",
+            "link": "\/manga\/naruto\/2480\/capitulo-276"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2413,
+        "name": "Naruto",
+        "chapter_name": "Recompensa",
+        "number": "275",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:17:20-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2479,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.983",
+            "link": "\/manga\/naruto\/2479\/capitulo-275"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2412,
+        "name": "Naruto",
+        "chapter_name": "Um sonho não realizado",
+        "number": "274",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:17:29-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2482,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.616",
+            "link": "\/manga\/naruto\/2482\/capitulo-274"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2411,
+        "name": "Naruto",
+        "chapter_name": "A Batalha Final",
+        "number": "273",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:17:17-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2478,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.816",
+            "link": "\/manga\/naruto\/2478\/capitulo-273"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2410,
+        "name": "Naruto",
+        "chapter_name": "Chiyo-Baa VS. Sasori",
+        "number": "272",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:12:30-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2390,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.930",
+            "link": "\/manga\/naruto\/2390\/capitulo-272"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2409,
+        "name": "Naruto",
+        "chapter_name": "Habilidades desconhecidas",
+        "number": "271",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:13:37-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2414,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.856",
+            "link": "\/manga\/naruto\/2414\/capitulo-271"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2408,
+        "name": "Naruto",
+        "chapter_name": "Erro de Cálculo",
+        "number": "270",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:10:27-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2346,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "5.290",
+            "link": "\/manga\/naruto\/2346\/capitulo-270"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2407,
+        "name": "Naruto",
+        "chapter_name": "Algo que eu possa fazer",
+        "number": "269",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:11:47-02:00",
+        "releases": {
+          "_scan8": {
+            "id_release": 2374,
+            "scanlators": [
+              {
+                "id_scanlator": 8,
+                "name": "Kousen",
+                "link": "\/scanlator\/kousen\/8"
+              }
+            ],
+            "views": "4.532",
+            "link": "\/manga\/naruto\/2374\/capitulo-269"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2406,
+        "name": "Naruto",
+        "chapter_name": "Marionete contra Marionete",
+        "number": "268",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:10:39-02:00",
+        "releases": {
+          "_scan8": {
+            "id_release": 2351,
+            "scanlators": [
+              {
+                "id_scanlator": 8,
+                "name": "Kousen",
+                "link": "\/scanlator\/kousen\/8"
+              }
+            ],
+            "views": "4.668",
+            "link": "\/manga\/naruto\/2351\/capitulo-268"
+          }
+        }
+      },
+      {
+        "id_serie": 1,
+        "id_chapter": 2405,
+        "name": "Naruto",
+        "chapter_name": "Determinação violenta",
+        "number": "267",
+        "date": "21\/10\/10",
+        "date_created": "2010-10-21T04:14:07-02:00",
+        "releases": {
+          "_scan1": {
+            "id_release": 2424,
+            "scanlators": [
+              {
+                "id_scanlator": 1,
+                "name": "scansPROJECT",
+                "link": "\/scanlator\/scansproject\/1"
+              }
+            ],
+            "views": "4.732",
+            "link": "\/manga\/naruto\/2424\/capitulo-267"
+          }
+        }
+      }
+    ]
+  }
