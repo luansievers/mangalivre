@@ -6,11 +6,12 @@ const axios = require('axios');
 const _cliProgress = require('cli-progress');
 var _ = require('lodash');
 
+axios.defaults.timeout = 900000
 axios.defaults.baseURL = 'https://mangalivre.com'
 axios.defaults.headers.common['accept'] = 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3';
 axios.defaults.headers.common['accept-language'] = 'en-US,en;q=0.9,pt;q=0.8';
 axios.defaults.headers.common['cache-control'] = 'no-cache';
-axios.defaults.headers.common['cookie'] = '_ga=GA1.2.569553888.1567012048; vg=7ad8217b-4f45-4a7e-bb94-9d2e050c5c74; mP_registerTip=1; mP_already_regTip=true; mP_already_regTip=1; mZ_swAuth=none; __cfduid=d0b943e8b7672227db6454f922d64fd441568635152; _mz_latest_readings=%5B%22193967%22%5D; mZ_sess=616536633934626136656532316264326265363132336265376465626263396537633232626638383834323639353866613438316661623731643763666564321a09e84ae9e1b3e345a145e9f59216da2da2efe719d5790ee4906b91d7117f7aaeb54f905380970b69b1060eac204d29ac08efe25d651077918de6e84893dd4d; _awl=2.1568988648.0.4-9b8a3318-7c8c2e8b7541cdac054498b4a6b06ab3-6763652d75732d6561737431-5d84dde8-0; cf_clearance=11b5ed7d1a25ae281e4ad82d68477c55e952786c-1569330407-86400-150';
+axios.defaults.headers.common['cookie'] = '_ga=GA1.2.569553888.1567012048; vg=7ad8217b-4f45-4a7e-bb94-9d2e050c5c74; mP_registerTip=1; mP_already_regTip=true; mP_already_regTip=1; _awl=2.1569499473.0.4-296a4ac5-7c8c2e8b7541cdac054498b4a6b06ab3-6763652d75732d6561737431-5d8ca951-0; mZ_swAuth=none; mZ_sess=6266633235613834646130336263666637303237333462353233356233303761376563626162343630653432343837313537383564663333336436353832663885a315d18bc580c4e4848bfc5b2815791b32cb0753284382c0e46e6395eb72d547daeb6a08f060b01948e9bdcdbd9d41f3974179cfbde6bd290585c14b768f5f; __cfduid=d7daea2178464d9c1b88d4c1235cec3d51570565253; _gid=GA1.2.71076868.1570565318; _gat_gtag_UA_17858403_7=1';
 axios.defaults.headers.common['dnt'] = '1';
 axios.defaults.headers.common['pragma'] = 'no-cache';
 axios.defaults.headers.common['sec-fetch-mode'] = 'same-origin';
@@ -53,9 +54,10 @@ class Manga extends Task {
       // await this.categories()
       // await this.series()
       // await this.scanlators()
-      await this.chapters()
-      await this.pages()
-      processando = false
+      // await this.chapters()
+      // await this.pages()
+      // process.exit(1)
+      // processando = false
     }
   }
 
@@ -124,7 +126,7 @@ class Manga extends Task {
     // console.log(`/scanlators/scanlators_list.json`)
     await axios.get(`/scanlators/scanlators_list.json`)
       .then(async (response) => {
-        const bar_scanlators = multibar.create(response.data.scanlators_list.length + 1, 0, { label: _.padEnd('Scanlators', 45) })
+        const bar_scanlators = multibar.create(response.data.scanlators_list.length, 0, { label: _.padEnd('Scanlators', 45) })
 
         for (const scanlatorJSON of response.data.scanlators_list) {
           const scanlator = await Scanlator.findOrCreate(
@@ -159,9 +161,9 @@ class Manga extends Task {
 
   async chapters() {
     const series = await Serie.all()
-    const bar_chapters = multibar.create(series.toJSON().length + 1, 0, { label: _.padEnd('Processing series', 50) })
+    const bar_chapters = multibar.create(series.toJSON().length, 0, { label: _.padEnd('Processing series', 50) })
 
-    _.chunk(series.toJSON(), 500).forEach(async chunk => {
+    _.chunk(series.toJSON(), 250).forEach(async chunk => {
 
       for (const serie of chunk) {
         var page = 1
@@ -185,7 +187,7 @@ class Manga extends Task {
                       date_created: chapterJSON.date_created,
                     }
                   )
-  
+
                   var attrRelease = Object.keys(chapterJSON.releases)[0]
                   var id_scanlator = Object.keys(chapterJSON.releases)[0].match(/\d/)
                   if (id_scanlator) {
@@ -193,7 +195,7 @@ class Manga extends Task {
                   } else {
                     id_scanlator = null
                   }
-  
+
                   Release.findOrCreate(
                     { id_release: chapterJSON.releases[attrRelease].id_release },
                     {
@@ -205,7 +207,7 @@ class Manga extends Task {
                   )
                 }
                 bar_series_chapter.update(page)
-                // bar_series_chapter.setTotal(page + 1)
+                bar_series_chapter.setTotal(page + 1)
               }
             })
           page += 1
@@ -213,44 +215,42 @@ class Manga extends Task {
         bar_chapters.increment()
       }
     })
-    // console.log("Chapters END")
   }
 
   async pages() {
     // pages = false
     const releases = await Release.all()
-    const bar_pages = multibar.create(releases.toJSON().length + 1, 0, { label: 'pages' })
+    const bar_pages = multibar.create(releases.toJSON().length, 0, { label: _.padEnd('Processing Pages', 50) })
 
-    for (const release of releases.toJSON()) {
+    _.chunk(releases.toJSON(), 5000).forEach(async chunk => {
 
-      var key = ''
+      for (const release of chunk) {
+        var key = ''
 
-      // console.log(release.link)
-      await axios.get(release.link, {
-        headers: ''
-      })
-        .then(function (response) {
-          key = response.data.match(/(?<=this.page.identifier = ").*(?=")/g)[0]
+        await axios.get(release.link, {
+          headers: ''
         })
-        .then(async () => {
-          // console.log(`/leitor/pages/${release.id_release}.json?key=${key}`)
-          await axios.get(`/leitor/pages/${release.id_release}.json?key=${key}`)
-            .then(async (response) => {
-              for (const [image, index] of response.data.images) {
-                await Page.findOrCreate(
-                  { number: index, release_id: release.id_release },
-                  {
-                    number: index,
-                    release_id: release.id_release,
-                    link: image
-                  }
-                )
-              }
-            })
-        })
-      bar_pages.increment()
-    }
-    // console.log("Pages END")
+          .then(function (response) {
+            key = response.data.match(/(?<=this.page.identifier = ").*(?=")/g)[0]
+          })
+          .then(async () => {
+            await axios.get(`/leitor/pages/${release.id_release}.json?key=${key}`)
+              .then(async (response) => {
+                for (const [index, value] of response.data.images.entries()) {
+                  await Page.findOrCreate(
+                    { number: index, release_id: release.id_release },
+                    {
+                      number: index,
+                      release_id: release.id_release,
+                      link: value
+                    }
+                  )
+                }
+              })
+          })
+        bar_pages.increment()
+      }
+    })
 
   }
 }
